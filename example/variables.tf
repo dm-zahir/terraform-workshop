@@ -1,7 +1,7 @@
 variable "function_name" {
   description = "Name of the Lambda function"
   type        = string
-  default     = "zahir-workshop-lambda"
+  default     = "template-workshop-lambda"
 }
 
 variable "region" {

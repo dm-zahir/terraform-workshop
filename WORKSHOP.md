@@ -389,5 +389,3 @@ Common questions will be addressed during the workshop. Feel free to ask about:
 
 ---
 
-**Happy Learning!** 🚀
-

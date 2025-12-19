@@ -70,7 +70,7 @@ data "archive_file" "lambda_zip" {
 }
 
 # Lambda Function
-resource "aws_lambda_function" "hello_world" {
+resource "aws_lambda_function" "template_hello_world" {
   filename         = data.archive_file.lambda_zip.output_path
   function_name    = var.function_name
   role            = aws_iam_role.lambda_execution_role.arn

@@ -6,7 +6,7 @@ remote_state {
   backend = "s3"
   
   config = {
-    bucket         = "zahir-terraform-state-bucket"  # UPDATE THIS with your S3 bucket name
+    bucket         = "your-terraform-state-bucket"  # UPDATE THIS with your S3 bucket name
     key            = "${path_relative_to_include()}/terraform.tfstate"
     region         = "us-east-1"  # UPDATE THIS if using a different region
     encrypt        = true
