@@ -66,13 +66,7 @@ This workshop provides a complete, working example of deploying a simple "Hello 
    terragrunt init --backend-bootstrap
    ```
    
-   **Note**: The `--backend-bootstrap` flag automatically creates the S3 bucket and DynamoDB table (if configured) for remote state. If you prefer to create the bucket manually, you can skip this flag and create it with:
-   ```bash
-   aws s3 mb s3://your-terraform-state-bucket --region us-east-1
-   aws s3api put-bucket-versioning \
-     --bucket your-terraform-state-bucket \
-     --versioning-configuration Status=Enabled
-   ```
+   **Note**: The `--backend-bootstrap` flag automatically creates the S3 bucket and DynamoDB table (if configured) for remote state. 
 
 3. **Review the plan**:
    ```bash
@@ -146,16 +140,6 @@ Key variables you can customize in `example/terragrunt.hcl`:
 ### Remote State
 
 The configuration uses S3 for remote state storage. Update the bucket name in the root `root.hcl` file before deploying. The `--backend-bootstrap` flag will automatically create the bucket if it doesn't exist.
-
-## Features
-
-- ✅ Simple, beginner-friendly example
-- ✅ Complete Terraform configuration
-- ✅ Terragrunt integration for DRY principles
-- ✅ Remote state management with S3
-- ✅ IAM roles with least privilege
-- ✅ CloudWatch logging configured
-- ✅ Comprehensive documentation
 
 ## Best Practices Demonstrated
 
